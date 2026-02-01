@@ -40,7 +40,7 @@ export function Footer() {
             visible: { transition: { staggerChildren: 0.08 } },
           }}
         >
-          {social.map(({ href, icon: Icon, label }, i) => (
+          {social.map(({ href, icon: Icon, label }) => (
             <motion.a
               key={label}
               href={href}
