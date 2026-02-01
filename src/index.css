@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-950;
+  }
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Ensure skill icons maintain their original colors */
+.skill-icon {
+  filter: none !important;
+  color-scheme: normal !important;
+  -webkit-filter: none !important;
+}
+
+.dark .skill-icon {
+  filter: none !important;
+  color-scheme: normal !important;
+  -webkit-filter: none !important;
+}
+
+/* Ensure floating tech icons maintain their original colors */
+.floating-tech-icon {
+  filter: none !important;
+  color-scheme: normal !important;
+  -webkit-filter: none !important;
+}
+
+.dark .floating-tech-icon {
+  filter: none !important;
+  color-scheme: normal !important;
+  -webkit-filter: none !important;
+}
+
+/* Prevent any SVG color inheritance */
+.skill-icon svg,
+.floating-tech-icon svg {
+  color: inherit !important;
+}
+
+.skill-icon svg path,
+.skill-icon svg circle,
+.skill-icon svg rect,
+.skill-icon svg polygon,
+.floating-tech-icon svg path,
+.floating-tech-icon svg circle,
+.floating-tech-icon svg rect,
+.floating-tech-icon svg polygon {
+  fill: currentColor !important;
+}
